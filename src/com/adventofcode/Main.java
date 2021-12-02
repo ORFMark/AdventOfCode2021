@@ -3,6 +3,8 @@ package com.adventofcode;
 import problems.Problem;
 import problems.dayone.SonarSweepPart1;
 import problems.dayone.SonarSweepPart2;
+import problems.daytwo.DivePart1;
+import problems.daytwo.DivePart2;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,12 +19,16 @@ public class Main {
     try {
         inputList.add(readInputFromFile("ProblemInput/Day1SonarSweep/SonarSweep.txt"));
         inputList.add(readInputFromFile("ProblemInput/Day1SonarSweep/SonarSweep.txt"));
+        inputList.add(readInputFromFile("ProblemInput/Day2Dive/Dive.txt"));
+        inputList.add(readInputFromFile("ProblemInput/Day2Dive/Dive.txt"));
     } catch (Exception e) {
         System.out.println("Invalid File Path! Can't read input");
         return;
     }
     problemList.add(new SonarSweepPart1());
     problemList.add(new SonarSweepPart2());
+    problemList.add(new DivePart1());
+    problemList.add(new DivePart2());
 
     int dayNumber = 0;
     for (Problem prob : problemList) {
